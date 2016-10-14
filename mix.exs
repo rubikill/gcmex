@@ -24,9 +24,9 @@ defmodule Gcmex.Mixfile do
   end
 
   defp deps do
-    [ {:poison, "~> 1.5"},
-      {:httpoison, "~> 0.7.2"},
-      {:ex_doc, github: "elixir-lang/ex_doc"},
-      {:earmark, ">= 0.0.0"}]
+    [ {:poison, "~> 3.0"},
+      {:httpoison, "~> 0.9.2"},
+      {:ex_doc, "~> 0.14.3"},
+      {:earmark, "~> 1.0"}]
   end
 end
