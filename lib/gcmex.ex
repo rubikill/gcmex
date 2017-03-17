@@ -38,7 +38,8 @@ defmodule GcmEx do
     case http.post process_url(path), data, headers do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         {:ok, process_response_body(body)}
-      _ -> {:error}
+      {:error, reason} ->
+        {:error, reason}
     end
   end
 
