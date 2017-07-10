@@ -38,6 +38,8 @@ defmodule GcmEx do
     case http.post process_url(path), data, headers do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         {:ok, process_response_body(body)}
+      {:ok, %HTTPoison.Response{status_code: 401, body: body}} ->
+        {:error, "Invalid (legacy) Server-key delivered or Sender is not authorized to perform request."}
       {:error, reason} ->
         {:error, reason}
     end
