@@ -6,8 +6,8 @@ defmodule Gcmex.Mixfile do
      version: "0.0.1",
      elixir: "~> 1.1",
      description: "Google Cloud Messaging client library for elixir",
-     package: package,
-     deps: deps]
+     package: package(),
+     deps: deps()]
   end
 
   def application do
