@@ -26,7 +26,7 @@ defmodule Gcmex.Mixfile do
   defp deps do
     [ {:httpoison, "~> 0.9"},
       {:poison, "~> 3.0"},
-      {:ex_doc, "~> 0.14.3"},
+      {:ex_doc, "~> 0.18.1"},
       {:earmark, "~> 1.1"}]
   end
 end
